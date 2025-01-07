@@ -1,113 +1,113 @@
-import React from 'react'
-import axios from "axios"
-
+import React from 'react';
+import axios from "axios";
 export default function Main() {
-
-  const [user,setUser]=React.useState({
-    image:"",
-    excel:"",
+  const [formData,setFormData]=React.useState({
+    image:'',
+    excel:'',
     name:'',
-    course:''
+    course:'',
+    year:''
   });
-  const handleOnSubmit=async (event)=>{
+  
 
-    // sending the data  to backend 
- event.preventDefault();
- console.log(user)
-  try{
-       const response=await axios.post("http://127.0.0.1:5000/data",user,{
-        headers: {
-          'Content-Type': 'application/json'
-        }
-       });
-       console.log(response)
+  const handleOnChange=(event)=>{
+    event.preventDefault();
+    
 
-   }catch(error){
-    console.log("Error while displaying"+error);
-   }
+    if(event.target.files){
+      console.log(event.target.files[0])
+      setFormData(prev=>({
+        ...prev,
+        [event.target.name]:event.target.files[0]
+      }))
 
-  };
-
-
-  const handleOnChange=(e)=>{
-    e.preventDefault();
-    const {name,value,files,type}=e.target;
-    if(type==='file'){
-     setUser((prev)=>({
-      ...prev,
-      [name]:URL.createObjectURL(files[0])
-     }))
+      console.log(formData)
     }
     else{
-      setUser(prev=>({
+      setFormData(prev=>({
         ...prev,
-       [name]:value
+        [event.target.name]:event.target.value
       }))
-    } 
-  };
+    }
+  }
 
- 
+  const handleOnSubmit=async(event)=>{
+    event.preventDefault()
+    const form=new FormData();
+    form.append('image',formData.image);
+    form.append('excelFile',formData.excel);
+    try{
+     console.log("im sending request")
+     const response=await axios.post("http://127.0.0.1:5000/data",form,{
+       headers:{
+         'Content-Type':'multipart/form-data'
+       }
+     });
+     console.log(response.data)
+
+    }catch(error){
+     console.log(error);
+    }
+}
 
   return (
     <div>
-        <form onSubmit={handleOnSubmit} encType='multipart/form-data'>
-          <label>
-            Choose the image
-          
-          <input  
-          type='file' 
-          name='image' 
-         
-          onChange={handleOnChange}
-          />
-          </label>
       
-          <br></br>
-          <br></br>
-          <label>
-            Choose the Excel 
-           
-            <input
-            type='file'
-            name='excel'
-            
-            onChange={handleOnChange}
-            />
-          </label>
-          <label>
-            Enter the name: 
-      
-          <input 
-          type='text' 
-          name='name' 
-          value={user.name}
-          onChange={handleOnChange}
-          />
-          </label>
-           <br></br>
-           <br></br>
-           <label>
-            Enter the Course Name: 
-           <input 
-          type='text' 
-          name='course' 
-          value={user.course}
-          onChange={handleOnChange}
-          />
-           </label>
-          
-           <br></br>
-           <br></br>
-          <input type='submit' 
-          
-          value='Submit'/>
-        </form>
-        <ul>
+      <form onSubmit={handleOnSubmit} className='bg-sky-500'>
 
-         <img src={user.file} alt=''/>
-          <li>{user.name}</li>
-          <li>{user.course}</li>
-        </ul>
+        {/* excel file */}
+        <label>Upload the excel file: </label>
+        <input
+        type='file'
+        name='excel'
+      
+        onChange={handleOnChange}
+        />
+        <br></br>
+        <br></br>
+        <label>Upload the Image: </label>
+        <input
+        type='file'
+        name='image'
+        onChange={handleOnChange}
+        />
+
+        <br></br>
+        <br></br>
+        <label>Enter the Student: </label>
+        <input
+        type='text'
+        name='name'
+        value={formData.name}
+        onChange={handleOnChange}
+        />
+
+        <br></br>
+        <br></br>
+        <label>Enter the Course Name:</label>
+        <input
+        type='text'
+        name='course'
+        value={formData.course}
+        onChange={handleOnChange}
+        />  
+         
+        <br></br>
+        <br></br>
+
+        <label>Enter the Year: </label>
+        <input
+        type='text'
+        name='year'
+        value={formData.year}
+        onChange={handleOnChange}
+        />
+          
+        <br></br>
+        <br></br>
+
+        <input type='submit' value='Submit'/>
+      </form>
     </div>
   )
 }

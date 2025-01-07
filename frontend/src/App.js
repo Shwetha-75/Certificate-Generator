@@ -1,10 +1,11 @@
 import React from "react";
-import Main from "./Component/Main"
-
+// import Main from "./Component/Main";
+import MainComponent from "./MainComponent/Main";
 function App() {
   return (
-    <div className="App">
-     <Main/>
+    <div className="w-[100%]">
+     {/* <Main/> */}
+     <MainComponent/>
     </div>
   );
 }
