@@ -1,24 +1,148 @@
+body{
+    width:100%;
+    overflow-x: hidden;
+    }
+.main--tag{
+    display: flex;
+    height:100vh;
+    width: 100%;
+}
 .header--tag{
-    font-family: "Cantata One", serif;
+   
     font-size:2rem;
     font-weight: bolder;
 }
-@media(max-width:768px){
+.heading--tag--main{
+    width:70%;
+    font-family: "Cantata One", serif;
+    
+}
+.navigation--tag--main{
+    color:rgb(195, 191, 191);
+    width:30%;
+    display: block;
+    font-family: "Cantata One", serif;
+
+    background-color: rgb(21, 20, 20);
+}
+.main--tag .hamburger--tag{
+    display:none ;
+}
+/* large devices */
+@media(min-width:992px) and (max-width:1200px){
     .header--tag{
         font-family: "Cantata One", serif;
-        font-size:1rem;
+        font-size:1.5rem;
         font-weight: bolder;
     }
     .main--tag{
         display: flex;
-        flex-direction: column;
+    
         width: 100%;
     }
     .heading--tag--main{
         width: 100%;
         
     }
-    .navigation--tag--main{
-      display: none;
+    .hamburger--tag{
+        display:none !important;
+    }
+    .main--tag .navigation--tag--main{
+      display: block !important;
+    }
+    .main--tag .hamburger--tag{
+        display:none ;
     }
 }
+/* extra large devices */
+@media (min-width:1200px) and (max-width:1400px){
+    .header--tag{
+        font-family: "Cantata One", serif;
+        font-size:2rem;
+        font-weight: bolder;
+    }
+    .main--tag{
+        display: flex;
+      
+        width: 100%;
+    }
+    .heading--tag--main{
+        width: 100%;
+        
+    }
+    .main--tag .navigation--tag--main{
+      display: block !important;
+    }
+    .main--tag .hamburger--tag{
+        display:none ;
+    }
+}
+    /* extra small devices  */
+    @media(max-width:576px){
+        .header--tag{
+            font-family: "Cantata One", serif;
+            font-size:0.5rem;
+            font-weight: bolder;
+        }
+        .main--tag{
+            display: flex;
+            width: 100%;
+        }
+        .heading--tag--main{
+            width: 100%;
+            
+        }
+        .main--tag .navigation--tag--main{
+          display: none !important;;
+        }
+        .main--tag .hamburger--tag{
+            display:block ;
+        }
+    }
+    /* small devices */
+    @media(min-width:576px) and (max-width:768px){
+        .header--tag{
+            font-family: "Cantata One", serif;
+            font-size:0.7rem;
+            font-weight: bolder;
+        }
+        .main--tag{
+            display: flex;
+           
+            width: 100%;
+        }
+        .heading--tag--main{
+            width: 100%;
+            
+        }
+        .main--tag .navigation--tag--main{
+          display: none !important;
+        }
+        .main--tag .hamburger--tag{
+            display:block ;
+        }
+    }
+    /* medium devices */
+    @media(min-width:768px) and (max-width:992px){
+        .header--tag{
+            font-family: "Cantata One", serif;
+            font-size:1rem;
+            font-weight: bolder;
+        }
+        .main--tag{
+            display: flex;
+           
+            width: 100%;
+        }
+        .heading--tag--main{
+            width: 100%;
+            
+        }
+        .main--tag .navigation--tag--main{
+          display: block !important;
+        }
+        .main--tag .hamburger--tag{
+            display:none ;
+        }
+    }
+    

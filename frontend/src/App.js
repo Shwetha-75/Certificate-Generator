@@ -3,10 +3,10 @@ import React from "react";
 import MainComponent from "./MainComponent/Main";
 function App() {
   return (
-    <div className="w-[100%]">
+    <>
      {/* <Main/> */}
      <MainComponent/>
-    </div>
+    </>
   );
 }
 
