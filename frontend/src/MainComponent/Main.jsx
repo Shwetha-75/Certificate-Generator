@@ -1,25 +1,18 @@
-import React from 'react'
-import"./main.css";
-import Hamburger from 'hamburger-react'
+  import React from 'react'
+  import"./main.css";
+  import NavigationBar from "./NavigationBar";
+  import Form from "../Component/Form/Main"
+  export default function Main() {
 
-export default function Main() {
-  const [isOpen, setOpen] = React.useState(false)
-  return (
-    <div className='main--tag'>
-      <div className='heading--tag--main'>
-       <h1 className='header--tag text-center'>Welcome to Certificate Generator System</h1>
+
+    return (
+      <div className='flex flex-row'>
+      
+        <NavigationBar/>
+        <div className='container main--container'>
+            <h1 className='heading--tag text-center'>Welcome To Certificate Generator System</h1>
+            <Form/>
+        </div>
       </div>
-      <div   className="hamburger--tag" >
-
-        <Hamburger 
-        toggled={isOpen} 
-        toggle={setOpen} 
-        
-        />
-        </div>
-        <div className=' text-center navigation--tag--main '>
-     <h1 >Hello</h1>
-        </div>
-    </div>
-  )
-}
+    )
+  }

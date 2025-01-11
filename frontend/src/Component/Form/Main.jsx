@@ -53,7 +53,7 @@ export default function Main() {
   return (
     <div>
       
-      <form onSubmit={handleOnSubmit} className='bg-sky-500'>
+      <form onSubmit={handleOnSubmit} className=' form--tag w-100'>
 
         {/* excel file */}
         <label>Upload the excel file: </label>
