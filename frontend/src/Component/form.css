@@ -1,0 +1,140 @@
+.form--tag{
+    padding:70px 50px;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.589);
+}
+.form--tag--one{
+    border: 2px solid rgba(0, 0, 0, 0.589);
+    
+}
+.form--tag--two{
+    border: 2px solid rgba(0, 0, 0, 0.589);
+    margin-top:100px;
+}
+.heading--tag--form{
+    padding:10px;
+    font-family: 'Titillium';
+    text-align: center;
+}
+
+.div--tag--input{
+  height:50px;
+  width:80%;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+.button--tag{
+    width:20%;  
+    height: 100%;;
+    margin-left:40%;
+    font-family: 'Titillium';
+    font-size: 1.2rem;
+    border:none;
+    color:rgb(168, 157, 157);
+    border-radius: 100px;
+    background-color:rgba(1, 9, 32, 0.83) ;
+}
+.button--tag:hover{
+    transition: 1s;
+    background-color:rgba(1, 9, 32);
+    color:white;
+}
+@media (max-width:576px){
+    .div--tag--input{
+        height:50px;
+        width:80%;
+        margin-left: 10%;
+        margin-top: 30px;
+      }
+    .button--tag{
+        width:100%;
+        margin:0;  
+        height: 100%;
+        font-family: 'Titillium';
+        font-size: 0.8rem;
+        border:none;
+        color:rgb(168, 157, 157);
+        border-radius: 100px;
+        background-color:rgba(1, 9, 32, 0.83) ;
+    }
+    .button--tag:hover{
+        transition: 1s;
+        background-color:rgba(1, 9, 32);
+        color:white;
+    }
+}
+
+@media (min-width:576px) and (max-width:768px){
+    .div--tag--input{
+        height:50px;
+        width:80%;
+        margin-left: 10%;
+        margin-top: 30px;
+      }
+    .button--tag{
+        width:80%;
+        margin-left:10%;  
+        height: 100%;
+        font-family: 'Titillium';
+        font-size: 0.8rem;
+        border:none;
+        color:rgb(168, 157, 157);
+        border-radius: 100px;
+        background-color:rgba(1, 9, 32, 0.83) ;
+    }
+    .button--tag:hover{
+        transition: 1s;
+        background-color:rgba(1, 9, 32);
+        color:white;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px){
+    .div--tag--input{
+        height:50px;
+        width:80%;
+        margin-left: 10%;
+        margin-top: 30px;
+      }
+    .button--tag{
+        width:60%;
+        margin-left:20%;  
+        height: 100%;
+        font-family: 'Titillium';
+        font-size: 0.8rem;
+        border:none;
+        color:rgb(168, 157, 157);
+        border-radius: 100px;
+        background-color:rgba(1, 9, 32, 0.83) ;
+    }
+    .button--tag:hover{
+        transition: 1s;
+        background-color:rgba(1, 9, 32);
+        color:white;
+    }
+}
+@media (min-width:992px) and (max-width:1200px){
+    .div--tag--input{
+        height:50px;
+        width:80%;
+        margin-left: 10%;
+        margin-top: 30px;
+      }
+    .button--tag{
+        width:30%;
+        margin-left:35G%;  
+        height: 100%;
+        font-family: 'Titillium';
+        font-size: 1rem;
+        border:none;
+        color:rgb(168, 157, 157);
+        border-radius: 100px;
+        background-color:rgba(1, 9, 32, 0.83) ;
+    }
+    .button--tag:hover{
+        transition: 1s;
+        background-color:rgba(1, 9, 32);
+        color:white;
+    }
+}

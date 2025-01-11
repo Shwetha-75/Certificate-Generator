@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from "axios";
+import "./form.css";
+
 export default function Main() {
   const [formData,setFormData]=React.useState({
     image:'',
@@ -51,27 +53,49 @@ export default function Main() {
 }
 
   return (
-    <div>
-      
-      <form onSubmit={handleOnSubmit} className=' form--tag w-100'>
-
-        {/* excel file */}
+    <div className='form--tag'>
+      <div className='form--tag--one'>
+        <h3 className='heading--tag--form'>Upload the Excel File To Generate Certificate </h3>
+      <form onSubmit={handleOnSubmit} >
+        <div  className="div--tag--input border border-primary">
         <label>Upload the excel file: </label>
         <input
-        type='file'
-        name='excel'
+         type='file'
+         name='excel'
+         onChange={handleOnChange}
+         />
+         </div>
+         <div  className="div--tag--input border border-primary">
+        <label>Upload the Image: </label>
+        <input
       
-        onChange={handleOnChange}
-        />
-        <br></br>
-        <br></br>
+         type='file'
+         name='image'
+         onChange={handleOnChange}
+         />
+         </div>
+         <div className="div--tag--input border border-primary">
+        <input 
+        className="button--tag"
+        type='submit'
+        value='Submit'>
+        </input>
+          </div>
+      </form>
+        </div>
+        
+        <div  className='form--tag--two '>
+
+      <h3 className='heading--tag--form'>Fill the Details to Generate Individual Certificate </h3>
+      <form onSubmit={handleOnSubmit} className='w-100'>
+
+        {/* excel file */}
         <label>Upload the Image: </label>
         <input
         type='file'
         name='image'
         onChange={handleOnChange}
         />
-
         <br></br>
         <br></br>
         <label>Enter the Student: </label>
@@ -81,7 +105,6 @@ export default function Main() {
         value={formData.name}
         onChange={handleOnChange}
         />
-
         <br></br>
         <br></br>
         <label>Enter the Course Name:</label>
@@ -91,10 +114,8 @@ export default function Main() {
         value={formData.course}
         onChange={handleOnChange}
         />  
-         
         <br></br>
         <br></br>
-
         <label>Enter the Year: </label>
         <input
         type='text'
@@ -108,6 +129,7 @@ export default function Main() {
 
         <input type='submit' value='Submit'/>
       </form>
+        </div>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 function NavigationBar() {
     const styles={
-      width:"30%",
+      width:"50%",
          backdropFilter:'blur(15px)',
         backgroundColor:'rgba(1, 9, 32, 0.83)',
         color:'white',
