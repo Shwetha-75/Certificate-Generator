@@ -10,7 +10,7 @@
       
         <NavigationBar/>
         <div className='container main--container'>
-            <h1 className='heading--tag text-center'>Welcome To Certificate Generator System</h1>
+            <h1 className='heading--tag text-center'>GENERATE YOUR CERTIFICATE </h1>
             <Form/>
         </div>
       </div>
