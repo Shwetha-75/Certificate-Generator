@@ -1,3 +1,6 @@
+.navbar-toggler-icon {
+    background-color:white !important;
+}
 .offcanvas-header .btn-close {
     background-color: rgba(223, 218, 218, 0.914) !important;
     border: 2px solid white;
@@ -5,6 +8,12 @@
     width: 1.5rem;
     height: 1.5rem;
     color:white;
+  }
+  .navigation--bat--tag--vertical{
+    width:50% !important;
+    backdrop-filter:blur(15px) !important;
+   background-color:rgba(0, 0, 0, 0.23) !important;
+   color:white !important;
   }
 .Navigation--bar--title{
     font-weight: bolder;
@@ -19,7 +28,6 @@
     backdrop-filter: blur(10px);
     background-color: transparent;
     position: fixed;
-   
     top:0;
     height:100px;
     color:white;
@@ -40,6 +48,13 @@ padding:120px;
         font-weight: bolder;
         font-size: 1.5rem;
     }
+    .navigation--bat--tag--vertical{
+        width:50% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
 }
 @media(min-width:576px) and (max-width:768px){
     .heading--tag{
@@ -47,6 +62,13 @@ padding:120px;
         font-weight: bolder;
         font-size: 1.8rem;
     }
+    .navigation--bat--tag--vertical{
+        width:50% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
 }
 @media(min-width:768px) and (max-width:992px){
     .heading--tag{
@@ -54,6 +76,13 @@ padding:120px;
         font-weight: bolder;
         font-size: 2rem;
     }
+    .navigation--bat--tag--vertical{
+        width:30% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
 }
 @media(min-width:992px) and (max-width:1200px){
     .heading--tag{
@@ -61,6 +90,13 @@ padding:120px;
         font-weight: bolder;
         font-size: 2.2rem;
     }
+    .navigation--bat--tag--vertical{
+        width:30% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
 }
 @media(min-width:1200px) and (max-width:1400px){
     .heading--tag{
@@ -68,4 +104,43 @@ padding:120px;
         font-weight: bolder;
         font-size: 2.4rem;
     }
+    .navigation--bat--tag--vertical{
+        width:30% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
+}
+@media(min-width:1400px){
+    .heading--tag{
+        font-family: 'Titillium';
+        font-weight: bolder;
+        font-size: 2.6rem;
+    }
+    .navigation--bat--tag--vertical{
+        width:30% !important;
+        backdrop-filter:blur(15px) !important;
+        background-color:rgba(0, 0, 0, 0.23) !important;
+
+       color:white !important;
+      }
+}
+.navigation--bar--item--tag{
+    background: transparent;
+}
+
+.navigation--bar--item--tag>li{
+   list-style: none;
+}
+.list--tag--nav{
+    color: rgb(203, 199, 199);
+    text-decoration: none;
+    font-family: 'Titillium';
+}
+.list--tag--nav:hover{
+    transition: 0.8s;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Titillium';
 }

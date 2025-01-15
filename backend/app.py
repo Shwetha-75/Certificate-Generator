@@ -16,9 +16,7 @@ CORS(app)
 
 app.secret_key="secret_key_app"
 
-def data(excel_file):
-    data_frame=pd.read_excel(r"C:\Users\SHWETHA\Desktop\Certificate_Generatoe\Certificate-Generator\Book1.xlsx")
-    return data_frame
+
     
 @app.route("/data", methods=["GET", "POST"])
 def index():
@@ -31,28 +29,20 @@ def index():
         excel=request.files['excelFile']
         data_frame=pd.read_excel(excel)
         
-       
-        
         print(data_frame)                                        
         # Save the uploaded file
         file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-        # save the certificate template in upload foldern 
+        # save the certificate template in upload folder 
         file.save(file_path)
         
         n=len(data_frame)
-        # traverse for all entries in the excel shhet 
+        # traverse for all entries in the excel sheet 
         for i in range(n):
             output_path = os.path.join(OUTPUT_FOLDER, data_frame['name'][i]+"Updated_Certificate.png")
             # cal the function which is responsible for generating the image 
             process_image(file_path, data_frame['name'][i], data_frame['course'][i], data_frame['year'][i], output_path)
-
-        
-       
         # Serve the updated image for download
         return send_file(output_path,as_attachment=True)
-    
-    
-    
     # Render the HTML form
     return render_template("index.html")
 

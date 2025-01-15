@@ -99,12 +99,8 @@ export default function Main() {
         </div>
         
         <div  className='form--tag--two '>
-
       <h3 className='heading--tag--form'>Fill the Details to Generate Individual Certificate </h3>
       <form onSubmit={handleOnSubmit} className='w-100'>
-
-
-
         <div id="image--input" className="div--tag--input">
             <label htmlFor='image--tag'>
           <img src={Image2} alt="" width='50px' height='50px'/>
@@ -117,8 +113,7 @@ export default function Main() {
          accept='.png'
          onChange={handleOnChange}
          />
-         </div>
-      
+         </div> 
         <div className="div--tag--input--form--two">
         <label>Enter the Student: </label>
         <input
